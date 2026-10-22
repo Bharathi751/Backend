@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+let isLoggedIn = true
+let isAdmin = true
+
+if(isLoggedIn&&isAdmin){
+console.log("Admin Dashboard")
+}else if (isLoggedIn||isAdmin){
+console.log("User Dashboard")
+}else{
+console.log("Please Login")
+}
+
+let isLoggedIn = true
+let isAdmin = false
+
+if(isLoggedIn&&isAdmin){
+console.log("Admin Dashboard")
+}else if (isLoggedIn||isAdmin){
+console.log("User Dashboard")
+}else{
+console.log("Please Login")
+}
+
+let isLoggedIn = false
+let isAdmin = false
+
+if(isLoggedIn&&isAdmin){
+console.log("Admin Dashboard")
+}else if (isLoggedIn||isAdmin){
+console.log("User Dashboard")
+}else{
+console.log("Please Login")
+}
+
+    </script>
+</body>
+</html>
