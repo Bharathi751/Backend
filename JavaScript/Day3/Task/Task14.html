@@ -1,0 +1,27 @@
+<script>
+const product = {
+    name:"Laptop",
+    price:60000,
+    category:"Electronics"
+}
+
+const {name,price,category} = product
+getProductInfo =()=>{
+    return `Product:${name}
+    Price:${price}
+    Category:${category}`
+}
+
+console.log(getProductInfo());
+
+const updateProduct ={...product,price:65000}
+
+console.log(`Updated Product:
+${updateProduct.name}
+${updateProduct.price}
+${updateProduct.category}
+
+Original Price:
+${product.price}`)
+
+</script>

@@ -1,0 +1,74 @@
+<script>
+
+    const user ={ 
+        name:"Bala",
+        age:25,
+        role:"Frontend Developer",
+        address:{
+            city:"Chennai"
+        }
+    }
+
+/* Function 1 */
+
+const getUserName = ()=>{
+    const {name} = user
+    return name
+}
+
+/* Function 2 */
+
+ const getUserLocation =()=>{
+    return user.address?.city??"Unknown"
+}
+
+/* Function 3 */
+
+ const getUserMessage =()=>{
+const {name,age,role,address} = user
+const city = address?.city??"Unknown"
+return `${name} is a ${age} years old ${role} from ${city}.`
+}
+
+/* Function 4 */
+
+const updateUser =()=>{
+
+const newUser = {...user,age:26,role:"Senior Frontend Developer"}
+
+return newUser
+}
+
+/* Function 5 */
+
+const printUser = ()=>{
+
+    const users = [
+        user,
+        {name:"Arun",age:30,role:"Backend Developer"},
+        {name:"Kumar",age:28,role:"Tester"}
+    ]
+
+    for(const user of users){
+        const {name,role} = user
+        console.log(`${name}-${role}`);
+        
+    }
+}
+
+/* Final Output  */
+
+
+console.log(getUserName());
+console.log(getUserLocation())
+console.log(getUserMessage());
+
+const newUser = updateUser()
+console.log(newUser);
+
+console.log(`Original age:${user.age}`);
+console.log(`Original role: ${user.role}`);
+
+printUser()
+
+</script>

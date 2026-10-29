@@ -1,0 +1,22 @@
+<script>
+    const user = {name:"Bala",age:25,role:"Developer"}
+    
+    const {name,age,role} = user
+
+    const updatedUser = {...user,age:26,role:"Senior Developer"}
+
+    const userDetails =()=>{
+        console.log(`Original:
+        ${name}
+        ${age}
+        ${role}`);
+
+        console.log(`Updated:
+        ${updatedUser.name}
+        ${updatedUser.age}
+        ${updatedUser.role}`);
+    
+    }
+    userDetails(user)
+    
+</script>

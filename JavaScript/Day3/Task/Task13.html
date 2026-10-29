@@ -1,0 +1,22 @@
+<script>
+
+    const user ={
+        name:"Bala",
+        role:"Admin",
+        isLoggedIn: true
+    }
+
+    const checkLogin =()=>{
+
+        const {name,role,isLoggedIn} = user
+
+       if(isLoggedIn){
+        console.log(`Welcome${name}`);
+        console.log(`Role:${role}`);
+       }else{
+        console.log(`Please Login`);
+       }
+
+    }
+    checkLogin()
+</script>

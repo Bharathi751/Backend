@@ -1,0 +1,17 @@
+<script>
+    const user = {name:"Bala",age:25}
+
+    const getCity = ()=>{
+        return user.address?.city ?? "Unknown City"
+    }
+
+    console.log(getCity());
+
+    user.address ={city:"Chennai"}  
+
+
+    console.log(getCity());
+    
+
+
+</script>
