@@ -1,0 +1,16 @@
+<script>
+const shoppingCart = [
+    {name:"Laptop",price:70000,quantity:1},
+    {name:"PowerBank",price:5000,quantity:2},
+    {name:"HardDisk",price:10000,quantity:4},
+    {name:"Phone",price:100000,quantity:2},
+]
+
+const cartTotal = shoppingCart.reduce((acc,curr)=>{
+    return acc +(curr.price * curr.quantity)
+},0)
+
+console.log(cartTotal);
+
+
+</script>
