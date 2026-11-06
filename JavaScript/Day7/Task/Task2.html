@@ -3,14 +3,16 @@
     const validate = new Promise((resolve, reject) => {
       let userName = "Admin"
       let password = "1234"
-      if(userName==="Admin" && password = "1234"){
+      if(userName==="Admin" && password === "1234"){
         resolve("Login Successfull")
       }else{
         reject("Invalid Credentails")
       }
     })
     
-    validate.then(()=>{
-        console.log
+    validate.then((result)=>{
+        console.log(result)
+    }).catch((error)=>{
+      console.log(error)
     })
 </script>

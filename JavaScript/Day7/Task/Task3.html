@@ -1,0 +1,23 @@
+<script>
+
+const price = 5000
+
+const discount = new Promise((resolve,reject)=>{
+    if (price <=0){
+        reject("Invalid Price")
+    }else{
+        const discountPrice = price - (price * 10/100)
+        resolve(discountPrice)
+    }
+})
+
+discount.then((result)=>{
+    console.log("Discounted Price:"+result)
+}).catch((error)=>{
+    console.log("Error:"+error)
+}).finally(()=>{
+    console.log("Calculation Completed");
+    
+})
+
+</script>
