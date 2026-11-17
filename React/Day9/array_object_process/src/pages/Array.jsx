@@ -18,10 +18,14 @@ const handleUpdate =(eid)=>{
 
   let copy = [...arr]
 
+  // copy[eid] = "Mern"
+  
+  // setArr(copy)
+
   setArr(copy.map((e,i)=>i==eid?"Skill":e))
 }
 
-const handleDelete =()=>{
+const handleDelete =(did)=>{
 
   let copy = [...arr]
 
@@ -36,11 +40,11 @@ const handleDelete =()=>{
     <h1>Array | Adding | Update | Delete </h1>
 
     {arr.map((e,i)=>(
-      <div  key={i}>
+      <div key={i}>
         <p>{e}</p>
-        <div className="flex gap-3">
-        <button onClick={handleUpdate} className="bg-white rounded p-1 text-black w-30">Update</button>
-        <button onClick={handleDelete} className="bg-white rounded p-1 text-black w-30">Delete</button>
+        <div className="flex gap-9">
+        <button onClick={()=>handleUpdate(i)} className="bg-white rounded p-1 text-black w-30">Update</button>
+        <button onClick={()=>handleDelete(i)} className="bg-white rounded p-1 text-black w-30">Delete</button>
         </div>
       </div>
     ))}
