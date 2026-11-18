@@ -18,21 +18,19 @@ const handleFilter =()=>{
 
 const copy =[...emp]
 
-const filterPro = copy.filter((e,i)=>e.salary>40000 && )
+const filterPro = copy.filter((e,i)=>e.salary>40000)
 
 setEmp(filterPro)
 
 
 }
 
-/* const handleprint =()=>{
+const handleprint =()=>{
 
     const copy = [...emp]
-    const print = copy.filter((e,i)=>e.name==emp.name)
-    console.log(print);
-   
+    setPrint(copy)
 
-} */
+}
   return (
    <>
    <div className="bg-blue-900 flex flex-col  gap-5   text-white p-10 h-200 justify-center items-center">
@@ -46,7 +44,18 @@ setEmp(filterPro)
     ))}
 
     <button onClick={handleFilter} className="bg-white rounded p-1 text-black w-40 font-semibold text-2xl"> Click to Filter </button>
-    {/*  <button onClick={handleprint} className="bg-white rounded p-1 text-black w-40 font-semibold text-2xl">  Print </button> */}
+     <button onClick={handleprint} className="bg-white rounded p-1 text-black w-40 font-semibold text-2xl">  Print </button>
+
+    <div className="flex justify-around gap-9">
+     {print?.map((e,i)=>(
+        <div key={e.id} className="bg-white rounded-2xl w-30  text-1xl text-center text-black p-3">
+            <h3>{e.name}</h3>
+            <p>{e.salary}</p>
+        </div>
+
+     ))}
+
+     </div>
    </div>
 
    </>
