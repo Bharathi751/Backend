@@ -68,7 +68,7 @@ const App = () => {
 
     if (search) {
 
-      copy = copy.filter((e,i)=>e.title.toLowerCase().includes(search.toLocaleLowerCase()))
+      copy = copy.filter((e,)=>e.title.toLowerCase().includes(search.toLowerCase()))
       
     }
 
