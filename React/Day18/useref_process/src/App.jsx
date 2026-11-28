@@ -6,6 +6,8 @@ const App = () => {
 
   const displayRef = useRef(null)
 
+  const display = useRef(null)
+
   const handleRef = () => {
 
     // console.log(myRef.current.value);
@@ -38,7 +40,7 @@ const App = () => {
         <input type="text" onChange={handleRef} ref={myRef} />
         <p ref={displayRef}></p>
 
-        <div className="bg-black text-white p-10 w-100 h-100 flex justify-center items-center">
+        <div ref={display} className="bg-black text-white p-10 w-100 h-100 flex justify-center items-center">
           Black box 
         </div>
         <button onClick={handleClick}>Hide </button>
